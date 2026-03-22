@@ -522,7 +522,7 @@ aria-label='' role="img">
         z-index: 2 !important;
     }
     
-    /* 3. Текст "ДМИТРИЙ И АЛЁНА" — убираем все лишние сдвиги */
+    /* 3. Текст "ДМИТРИЙ И АЛЁНА" — только позиционирование, БЕЗ ЦВЕТА */
     [data-elem-id="1760560571489"] {
         position: absolute !important;
         top: 1.5% !important;
@@ -531,91 +531,17 @@ aria-label='' role="img">
         width: 90% !important;
         text-align: center !important;
         z-index: 10 !important;
-        color: #fbf6ec !important;
+        /* УБРАНО: color: #fbf6ec !important; */
+        /* УБРАНО: background: transparent !important; */
         font-size: 28px !important;
         font-family: 'einvite', Arial, sans-serif !important;
         font-weight: 500 !important;
         pointer-events: none !important;
-        background: transparent !important;
         margin: 0 !important;
     }
-	[data-elem-id="1760621648661"] {
-    position: absolute !important;
-    top: 10px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 90% !important;
-    z-index: 15 !important;
-}
-	/* Смещение верхней декоративной рамки выше */
-@media screen and (max-width: 768px) {
+    
+    /* 4. Декоративная рамка */
     [data-elem-id="1760621648661"] {
-        position: relative !important;
-        margin-top: -40px !important;  /* отрицательное значение поднимает вверх */
-        z-index: 15 !important;
-    top: 10px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 100% !important;
-    z-index: 15 !important;
-}
-@media screen and (max-width: 768px) {
-    /* Убираем лишние отступы после фотографии */
-    
-    /* 1. Декоративная рамка — уменьшаем отступы */
-    [data-elem-id="1760621648661"] {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    
-    /* 2. Блок с датой (цифры 19-23) — уменьшаем */
-    .tn-elem[data-elem-id="1760637951941"],
-    .tn-elem[data-elem-id="176063812478247570"],
-    .tn-elem[data-elem-id="1760636785652"],
-    .tn-elem[data-elem-id="176063898706284530"],
-    .tn-elem[data-elem-id="176063742942334090"],
-    .tn-elem[data-elem-id="176063917656697890"],
-    .tn-elem[data-elem-id="176285544759471050"],
-    .tn-elem[data-elem-id="176063917657810070"],
-    .tn-elem[data-elem-id="176063917658296990"] {
-        margin-top: 0 !important;
-        margin-bottom: 5px !important;
-        padding: 0 !important;
-    }
-    
-    /* 3. Текст "Дорогие и любимые!" */
-    [data-elem-id="176064046373849470"] {
-        margin-top: 10px !important;
-        margin-bottom: 10px !important;
-        padding-top: 0 !important;
-    }
-    
-    /* 4. Родительский контейнер фотографии */
-    [data-elem-id="1760620691607"] {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    
-    /* 5. Затемняющий слой */
-    [data-elem-id="176063719070340330"] {
-        margin-bottom: 0 !important;
-    }
-}
-@media screen and (max-width: 768px) {
-    /* Смещение второй фотографии вниз */
-    [data-elem-id="176064264408311470"] {
-        position: relative !important;
-        top: 1250px !important;  /* положительное значение смещает вниз */
-        margin-bottom: 20px !important;
-    }
-    
-    /* Само изображение */
-    [data-elem-id="176064264408311470"] .tn-atom {
-        background-position: center !important;
-        background-size: cover !important;
-    }
-}
- [data-elem-id="1760621648661"] {
         position: absolute !important;
         top: 370px !important;
         left: 50% !important;
@@ -631,18 +557,60 @@ aria-label='' role="img">
         height: auto !important;
     }
     
+    /* 5. Смещение второй фотографии */
+    [data-elem-id="176064264408311470"] {
+        position: relative !important;
+        top: 1250px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    [data-elem-id="176064264408311470"] .tn-atom {
+        background-position: center !important;
+        background-size: cover !important;
+    }
+    
+    /* 6. Убираем лишние отступы */
+    [data-elem-id="1760621648661"] {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    /* 7. Блок с датой (цифры 19-23) — уменьшаем отступы */
+    .tn-elem[data-elem-id="1760637951941"],
+    .tn-elem[data-elem-id="176063812478247570"],
+    .tn-elem[data-elem-id="1760636785652"],
+    .tn-elem[data-elem-id="176063898706284530"],
+    .tn-elem[data-elem-id="176063742942334090"],
+    .tn-elem[data-elem-id="176063917656697890"],
+    .tn-elem[data-elem-id="176285544759471050"],
+    .tn-elem[data-elem-id="176063917657810070"],
+    .tn-elem[data-elem-id="176063917658296990"] {
+        margin-top: 0 !important;
+        margin-bottom: 5px !important;
+        padding: 0 !important;
+    }
+    
+    /* 8. Текст "Дорогие и любимые!" */
+    [data-elem-id="176064046373849470"] {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        padding-top: 0 !important;
+    }
+    
+    /* 9. Родительский контейнер фотографии */
+    [data-elem-id="1760620691607"] {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    /* 10. Затемняющий слой */
+    [data-elem-id="176063719070340330"] {
+        margin-bottom: 0 !important;
+    }
+    
     /* Убедимся, что родительский блок фотографии — относительный */
     [data-elem-id="1760620691607"] {
         position: relative !important;
-    }
-	@media screen and (max-width: 768px) {
-    /* Фиксируем цвета кружков дресс-кода */
-    [data-elem-id="176064476123029170"] .tn-atom {
-        background-color: #736b4f !important;
-    }
-    
-    [data-elem-id="176064476121878660"] .tn-atom {
-        background-color: #84592c !important;
     }
 }
 }
