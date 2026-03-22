@@ -492,8 +492,6 @@ aria-label='' role="img">
 }
 
 /* ===== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ===== */
-/* ===== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ (скопировано из источника) ===== */
-
 /* Стили для планшетов (640-1199px) */
 @media screen and (max-width: 1199px) {
     #rec1436752311 .tn-elem[data-elem-id="1762861314577"] {
@@ -925,8 +923,14 @@ aria-label='' role="img">
         display: table;
         top: 0px;
         left: calc(50% - 160px + 0px);
-        width: 320px;
-        height: 512px;
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+    #rec1436752311 .tn-elem[data-elem-id="1760620691607"] .tn-atom {
+        background-position: top center !important;
+        background-size: cover !important;
+        min-height: 400px;
     }
     #rec1436752311 .tn-elem[data-elem-id="176063719070340330"] {
         display: table;
@@ -935,19 +939,28 @@ aria-label='' role="img">
         width: 320px;
         height: 512px;
     }
-    #rec1436752311 .tn-elem[data-elem-id="176064264408311470"] {
-        display: table;
-        top: 1690px;
-        left: calc(50% - 160px + 0px);
-        width: 320px;
-        height: 512px;
+
+	 /* 5. Смещение второй фотографии */
+    [data-elem-id="176064264408311470"] {
+        position: relative !important;
+        top: 1680px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    [data-elem-id="176064264408311470"] .tn-atom {
+        background-position: center !important;
+        background-size: cover !important;
     }
     #rec1436752311 .tn-elem[data-elem-id="176064264409470510"] {
         display: table;
         top: 1690px;
         left: calc(50% - 160px + 0px);
-        width: 320px;
-        height: 471px;
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+    #rec1436752311 .tn-elem[data-elem-id="176064264409470510"] .tn-atom {
+        min-height: 400px;
     }
     #rec1436752311 .tn-elem[data-elem-id="1760560571489"] {
         display: table;
@@ -1404,13 +1417,29 @@ aria-label='' role="img">
         height: 220px;
     }
 }
-    /* Ваши дополнительные правки для позиционирования (без изменения цветов) */
+
+/* ВАШИ ДОПОЛНИТЕЛЬНЫЕ ПРАВКИ ДЛЯ ПОЗИЦИОНИРОВАНИЯ */
 @media screen and (max-width: 768px) {
-    /* Смещение второй фотографии */
-    [data-elem-id="176064264408311470"] {
-        position: relative !important;
-        top: 1250px !important;
-        margin-bottom: 20px !important;
+    /* Текст "ДМИТРИЙ И АЛЁНА" - позиционирование */
+    #rec1436752311 .tn-elem[data-elem-id="1760560571489"] {
+        position: absolute !important;
+        top: 15px !important;
+        left: 85% !important;
+        transform: translateX(-50%) !important;
+        width: auto !important;
+        white-space: nowrap !important;
+        font-size: 24px !important;
+        z-index: 10 !important;
+    }
+    
+    /* Декоративная волнистая линия */
+    #rec1436752311 .tn-elem[data-elem-id="1760621527944"] {
+        position: absolute !important;
+        top: 65px !important;
+        left: 85% !important;
+        transform: translateX(-50%) !important;
+        width: 200px !important;
+        z-index: 10 !important;
     }
     
     /* Убираем лишние отступы */
@@ -1439,6 +1468,43 @@ aria-label='' role="img">
         margin-top: 10px !important;
         margin-bottom: 10px !important;
         padding-top: 0 !important;
+    }
+}
+/* ПОДНЯТИЕ ЗАГОЛОВКА И ДЕКОРАТИВНОГО ЭЛЕМЕНТА НА МОБИЛЬНЫХ */
+@media screen and (max-width: 768px) {
+    /* Текст "ДМИТРИЙ И АЛЁНА" - поднимаем выше */
+    #rec1436752311 .tn-elem[data-elem-id="1760560571489"] {
+        top: 3% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+	@media screen and (max-width: 768px) {
+    /* Текст "ДМИТРИЙ И АЛЁНА" - сдвиг вправо */
+    #rec1436752311 .tn-elem[data-elem-id="1760560571489"] {
+        position: absolute !important;
+        top: 20px !important;
+        left: 15% !important;
+        right: 10px !important;  /* отступ от правого края */
+        transform: none !important;
+        width: auto !important;
+        text-align: right !important;
+    }
+}
+    
+    /* Декоративный SVG-элемент (волнистая линия) - поднимаем выше */
+    #rec1436752311 .tn-elem[data-elem-id="1760621527944"] {
+        top: 1.5% !important;
+        transform: translateX(-50%) !important;
+        left: 50% !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* Фиксируем цвета кружков дресс-кода */
+    [data-elem-id="176064476123029170"] .tn-atom {
+        background-color: #736b4f !important;
+    }
+    
+    [data-elem-id="176064476121878660"] .tn-atom {
+        background-color: #84592c !important;
     }
 }
 }
